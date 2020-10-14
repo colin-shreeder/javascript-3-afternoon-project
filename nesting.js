@@ -50,8 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater (){
+  for (let key in obj){
+    if (key.includes("Theo")){
+      delete employees[key]
+    } else {
+      if (key.includes("Lorie")){
+        employees[key]='HR'
+      }
+    }
+  } return obj
 
+  }
 
 
 ////////// PROBLEM 2 //////////
@@ -68,7 +78,14 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates (array){
+  for (i=0;i<=array.length;i++){
+    for (j=1;j=array.length;j++){}
+    if (i===j){
+      delete array[i]
+    }
+  } return array;
+}
 
 
 
@@ -96,9 +113,8 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -138,7 +154,14 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+
+
+
+function recordCleaner(){
+  for(let key in myCar.accidents){
+    accidents[key].atFaultForAccident = false;
+  }
+}
 
 
 
@@ -157,6 +180,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
+function looper (){
+  for(i = 0; i < numsArr.length; i++){
+    for(j = 0; j < numsArr.length; j++){
+      if(numsArr[j][j] % 2 !== 0){
+        numsArr[j][j] = "odd";
+      } else if(numsArr[j][j] % 2 === 0){
+        numsArr[j][j] = "even";
+      }
+    }
+  }
+  return numsArr;
+}
 

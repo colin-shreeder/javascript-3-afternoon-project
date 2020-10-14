@@ -39,8 +39,12 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  //Code Here
+function showValues(obj){
+  let string = ""
+  for (let key in obj) {
+    string = string + obj[key]
+  }
+  return string 
 }
 
 
@@ -53,7 +57,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(object){
+  for (let key in object){
+    if (object[key] > 10) {
+      object[key] = 0
+    }
+  }
+  return object
+}
 
 
 
@@ -65,7 +76,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(obj){
+  for(let key in obj){
+    obj[key] * 2;
+  }
+  return obj;
+}
 
 
 
@@ -79,7 +95,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets (obj) {
+  let sentence = ""
+  for (let key in obj) {
+    if (key.startsWith("sh")){
+      sentence += obj[key]
+    }
+  }
+  return sentence
+}
 
 
 
@@ -110,7 +134,10 @@ function showValues( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword (object){
+  delete object.password
+  return object
+}
 
 
 
@@ -129,7 +156,11 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-//Code Here
+for(let key in deleteTheBigNumbers){
+  if(deleteTheBigNumbers.key > 100){
+    delete deleteTheBigNumbers.key;
+  }
+}
 
 
 
@@ -142,7 +173,16 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+
+
+
+function startsWithK(obj){
+  for (let key in obj){
+    if (obj[key].startsWith("k")) {
+      delete obj[key];
+    } 
+  }
+}
 
 
 
@@ -157,6 +197,12 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure (obj){
+  for (let key in obj){
+    if (obj[key].includes('treasure')){
+      delete obj[key]
+    }
+  } return obj
+}
 
 
